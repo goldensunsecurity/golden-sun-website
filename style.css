@@ -397,12 +397,63 @@ footer {
     .enquiry-form-container { padding: 30px 20px; }
 }
 
-/* --- Map Styles --- */
+/* --- FINAL FIXED LAYOUT (Flexbox) --- */
+
+/* 1. The Container that holds both columns */
+.form-map-split {
+    display: flex;          /* Use Flexbox instead of Grid */
+    gap: 30px;
+    align-items: stretch;   /* Forces both sides to be equal height */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 2. Left Column (The Form) */
+.enquiry-form-container {
+    flex: 1.2;              /* Takes up 55% of the width */
+    width: 100%;
+    margin: 0;              /* Removes old centering margins */
+    display: flex;
+    flex-direction: column;
+}
+
+/* 3. Right Column (Hours + Map wrapper) */
+.map-column {
+    flex: 1;                /* Takes up 45% of the width */
+    display: flex;
+    flex-direction: column; /* Stacks Hours on top of Map */
+    gap: 20px;
+}
+
+/* 4. The Map Box itself */
 .map-container {
-    max-width: 1000px;
-    margin: 0 auto 50px; /* Centers it and adds space below */
+    flex-grow: 1;           /* THE MAGIC FIX: Expands to fill all empty space */
+    width: 100%;
+    min-height: 200px;      /* Safety height */
+    position: relative;     
+    
     border-radius: 20px;
-    overflow: hidden; /* Ensures the map stays inside the rounded corners */
+    overflow: hidden;
     box-shadow: 0 15px 40px rgba(0,0,0,0.2);
     border: 5px solid rgba(255,255,255,0.2);
+}
+
+/* 5. The Google Map inside the box */
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;           /* Forces map to touch bottom of container */
+    object-fit: cover;
+}
+
+/* 6. Mobile Layout (Stack them) */
+@media (max-width: 900px) {
+    .form-map-split {
+        flex-direction: column; /* Stack vertically on phones */
+    }
+    .map-container {
+        min-height: 400px; /* Fixed height on phone */
+    }
 }

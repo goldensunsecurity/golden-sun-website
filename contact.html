@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Get a Quote | Golden Sun Security Services</title>
+    <meta name="description" content="Contact Golden Sun Security for a free quote. Office in Zirakpur. Call +91-7814300788 for security guards, gunmen, and housekeeping staff.">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="LOGO GOLDEN.png" alt="Golden Sun Security Logo" class="logo-img">
+                <span>Golden Sun Security Private Limited</span>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="contact.html" style="color: #fdbb2d;">Contact</a></li>
+                <li><a href="#" class="login-btn">Staff Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-section">
+            <div class="contact-section">
+                <div class="container">
+                    <h2 class="section-title" style="color: white;">Contact Us</h2>
+                    
+                    <div class="contact-grid">
+                        <div class="contact-item reveal">
+                            <h3>📧 Email</h3>
+                            <p>info@goldensunsecurity.com</p>
+                            <p style="font-size: 0.9rem; margin-top: 5px;">HR: hr@goldensunsecurity.com</p>
+                        </div>
+                        <div class="contact-item reveal">
+                            <h3>📞 Phone</h3>
+                            <p>+91-7814300788 (Mobile)</p>
+                            <p style="font-size: 0.9rem; margin-top: 5px;">0176-2509211 (Landline)</p>
+                        </div>
+                        <div class="contact-item reveal">
+                            <h3>🏢 Head Office</h3>
+                            <p>Office No. 438, 4th Floor, Block D&E</p>
+                            <p>Chandigarh Citi Center, VIP Road</p>
+                            <p>Zirakpur, Punjab 140603</p>
+                        </div>
+                    </div>
+
+                    <div class="form-map-split">
+                        
+                        <div class="enquiry-form-container reveal">
+                            <h3 style="text-align: center; margin-bottom: 30px; color: #1a2a6c;">Request a Professional Quote</h3>
+                            <form id="enquiryForm">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+        <div>
+            <label>Contact Person Name</label>
+            <input type="text" id="name" required placeholder="Enter full name">
+        </div>
+        <div>
+            <label>Company / Organization</label>
+            <input type="text" id="company" placeholder="e.g. ABC Pvt Ltd (Optional)">
+        </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 15px;">
+        <div>
+            <label>Phone Number</label>
+            <input type="tel" id="phone" required placeholder="+91...">
+        </div>
+        <div>
+            <label>Email Address</label>
+            <input type="email" id="email" required placeholder="name@company.com">
+        </div>
+    </div>
+
+    <div style="margin-top: 20px;">
+        <label>Service Required</label>
+        <select id="service" required style="background: white;">
+            <option value="" disabled selected>Select a Service Category...</option>
+            
+            <optgroup label="Security Services">
+                <option value="Security Guards">Security Guards (Male/Female)</option>
+                <option value="Armed Guards">Armed Guards / Gunmen</option>
+                <option value="Chowkidar">Chowkidar / Watchman</option>
+                <option value="Bouncers">Bouncers / Event Security</option>
+                <option value="PSO">Personal Security Officer (PSO)</option>
+            </optgroup>
+            
+            <optgroup label="Manpower Staffing">
+                <option value="Admin/Clerical">Administration & Clerical Staff</option>
+                <option value="MTS">Multi-Tasking Staff (MTS)</option>
+                <option value="Pantry/Support">Pantry Boys / Peons</option>
+                <option value="Drivers">Drivers / Valet</option>
+                <option value="Industrial Labour">Industrial Labour</option>
+            </optgroup>
+
+            <optgroup label="Facility Services">
+                <option value="Housekeeping">Housekeeping Services</option>
+                <option value="Landscaping">Landscaping / Gardening</option>
+                <option value="Pest Control">Pest Control Services</option>
+                <option value="Technical Maintenance">Electrician / Plumber / Maintenance</option>
+            </optgroup>
+
+            <optgroup label="Other">
+                <option value="Tender Support">Government Tender Support</option>
+                <option value="Other">Other Requirement</option>
+            </optgroup>
+        </select>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;">
+        <div>
+            <label>No. of Staff Needed</label>
+            <input type="number" id="staff_count" placeholder="e.g. 5">
+        </div>
+        <div>
+            <label>Contract Duration</label>
+            <select id="duration" style="background: white;">
+                <option value="Long Term (1 Year+)">Long Term (1 Year+)</option>
+                <option value="Short Term (Months)">Short Term (Months)</option>
+                <option value="One Time Event">One Time Event (1-3 Days)</option>
+                <option value="Urgent/Emergency">Urgent / Emergency</option>
+            </select>
+        </div>
+    </div>
+
+    <div style="margin-top: 20px;">
+        <label>Location (City/Site Address)</label>
+        <input type="text" id="location" required placeholder="Where is the service required?">
+    </div>
+
+    <div style="margin-top: 20px;">
+        <label>Specific Requirements</label>
+        <textarea id="message" rows="3" placeholder="Any specific details? (e.g. 12hr shift, specific uniform, etc.)"></textarea>
+    </div>
+
+    <div style="margin-top: 20px;">
+        <div class="g-recaptcha" data-sitekey="6LeGIFUsAAAAAPHvZ7U63ku-C-7HQFwC7zyAa_pX"></div>
+    </div>
+
+    <button type="submit" style="width: 100%; margin-top: 30px;" class="cta-button">Send Quote Request</button>
+</form>
+                        </div>
+
+                        <div class="map-column reveal">
+    
+                            <div style="text-align: center; padding: 25px; background: rgba(255,255,255,0.1); border-radius: 20px; color: white; backdrop-filter: blur(5px);">
+                            <h4 style="color: #fdbb2d; font-size: 1.2rem; margin-bottom: 10px;">🕒 Office Hours</h4>
+                            <p><strong>Mon - Sat:</strong> 9:30 AM – 5:30 PM</p>
+                            </div>
+
+                        <div class="map-container">
+                             <<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3432.8204360582004!2d76.81814227552427!3d30.639017774629647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390febb0c672a42f%3A0xd2febe2cf0835026!2sGolden%20Sun%20Security%20Services%20Private%20Limited!5e0!3m2!1sen!2sin!4v1769316194324!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+
+                    </div> </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Golden Sun Security Services Private Limited.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
