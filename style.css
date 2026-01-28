@@ -122,9 +122,12 @@ nav a:hover::after { width: 100%; }
 }
 
 /* --- Hero Section --- */
+
+/* --- Hero Section with Background Carousel --- */
 .hero {
+    /* Default fallback image */
     background: linear-gradient(rgba(26, 42, 108, 0.85), rgba(178, 31, 31, 0.8)), 
-                url('https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80');
+                url('https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1600&q=80');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -132,6 +135,48 @@ nav a:hover::after { width: 100%; }
     text-align: center;
     padding: 150px 20px;
     position: relative;
+    /* The Animation Name and Duration (15 seconds total loop) */
+    animation: heroCarousel 15s infinite ease-in-out;
+    transition: background-image 1s ease-in-out;
+}
+
+/* --- The Carousel Animation Keyframes --- */
+@keyframes heroCarousel {
+    /* 0% - 33%: Show Security / Corporate Team */
+    0% {
+        background: linear-gradient(rgba(26, 42, 108, 0.85), rgba(178, 31, 31, 0.8)), 
+                    url('https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1600&q=80');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+    
+    /* 33% - 66%: Show Manpower / Office Staff */
+    33% {
+        background: linear-gradient(rgba(26, 42, 108, 0.85), rgba(178, 31, 31, 0.8)), 
+                    url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1600&q=80');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
+    /* 66% - 100%: Show Facility / Cleaning Services */
+    66% {
+        background: linear-gradient(rgba(26, 42, 108, 0.85), rgba(178, 31, 31, 0.8)), 
+                    url('https://images.unsplash.com/photo-1581578731117-104f2a417954?auto=format&fit=crop&w=1600&q=80');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+    
+    /* Loop back to start smoothly */
+    100% {
+        background: linear-gradient(rgba(26, 42, 108, 0.85), rgba(178, 31, 31, 0.8)), 
+                    url('https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1600&q=80');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
 }
 
 .hero h1 {
