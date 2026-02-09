@@ -30,29 +30,22 @@ document.querySelector('.login-btn').addEventListener('click', function(e) {
     alert("Staff Portal: Please contact HR for access credentials.");
 });
 
-// --- FINAL FIXED FORM SUBMISSION ---
+// --- FINAL FORM SUBMISSION LOGIC ---
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('enquiryForm');
-    
-    // Only run this if the form actually exists on the page
     if (form) {
         form.addEventListener('submit', function(e) {
+            e.preventDefault(); // Stop default submit
             
-            // 1. BLOCK the form from submitting immediately
-            e.preventDefault();
-
-            // 2. CHECK if the user clicked the Captcha
+            // Check Captcha
             const recaptchaResponse = grecaptcha.getResponse();
-
             if (!recaptchaResponse) {
-                // If Captcha is empty, alert the user and STOP here.
-                alert('Please verify that you are not a robot.');
-                return; 
+                alert('Please check the box to prove you are not a robot.');
+                return;
             }
 
-            // 3. If Captcha is valid, RELEASE the form to Web3Forms
-            // This bypasses the old "mailto" code and sends the email properly.
-            form.submit();
+            // Submit to Web3Forms
+            form.submit(); 
         });
     }
 });
